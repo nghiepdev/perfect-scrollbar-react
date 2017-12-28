@@ -1,0 +1,9 @@
+.scrollbar-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.scrollbar-wrapper > .inner-content.normal {
+  height: 100%;
+  overflow-y: scroll;
+}
