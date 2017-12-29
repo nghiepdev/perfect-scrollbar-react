@@ -13,11 +13,9 @@ body {
 
 .App {
   width: 500px;
-  max-width: 90%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 90vw;
+  margin: 100px auto 400px;
+  padding: 10px 5px;
 }
 
 h1,

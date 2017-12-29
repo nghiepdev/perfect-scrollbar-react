@@ -41,7 +41,7 @@ class App extends React.Component {
         <button onClick={this.toggle}>{enable ? 'Off' : 'On'}</button>
         <div
           className="sample-container"
-          style={{ display: 'flex', maxHeight: '200px', marginTop: 0 }}
+          style={{ display: 'flex', maxHeight: '300px', marginTop: 0 }}
         >
           <Scrollbar
             innerRef={node => (this.scrollbar = node)}
@@ -54,7 +54,7 @@ class App extends React.Component {
         </div>
 
         <div
-          style={{ display: 'flex', maxHeight: '250px', background: '#fff' }}
+          style={{ display: 'flex', maxHeight: '350px', background: '#fff' }}
         >
           <Scrollbar options={{ minScrollbarLength: 50 }}>
             <div className="sample-container-2">
