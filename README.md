@@ -23,6 +23,7 @@ $ yarn add perfect-scrollbar-react
 
 ```js
 import Scrollbar from 'perfect-scrollbar-react';
+import 'perfect-scrollbar-react/dist/style.min.css';
 ```
 
 ```css

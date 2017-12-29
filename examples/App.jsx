@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Scrollbar from '../index';
+import Scrollbar from '../src';
 
 class App extends React.Component {
   state = {

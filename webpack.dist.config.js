@@ -2,10 +2,11 @@
 
 const webpack = require('webpack');
 const path = require('path');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    'index.min': './index.js',
+    'index.min': './src/index.js',
   },
 
   externals: ['react', 'react-dom', 'prop-types'],
@@ -13,7 +14,7 @@ module.exports = {
   output: {
     filename: '[name].js',
     chunkFilename: '[id].chunk.js',
-    publicPath: '/',
+    path: __dirname + '/dist',
     libraryTarget: 'umd',
     library: 'PerfectScrollbarReact',
   },
@@ -39,6 +40,9 @@ module.exports = {
       },
     }),
     new webpack.optimize.ModuleConcatenationPlugin(),
+    new ExtractTextPlugin({
+      filename: 'style.min.css',
+    }),
   ],
 
   module: {
@@ -53,14 +57,14 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: [
+            {
+              loader: 'css-loader',
+            },
+          ],
+        }),
       },
     ],
   },

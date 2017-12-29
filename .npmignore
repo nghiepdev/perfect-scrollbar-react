@@ -5,5 +5,3 @@ examples
 webpack.config.js
 webpack.dist.config.js
 bundle.js
-index.js
-style.css

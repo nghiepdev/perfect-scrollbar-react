@@ -1,5 +1,7 @@
 .scrollbar-wrapper {
   position: relative;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
 }
 
