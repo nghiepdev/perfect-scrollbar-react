@@ -5,7 +5,7 @@ import Scrollbar from '../src';
 class App extends React.Component {
   state = {
     enable: true,
-    data: Array(40).fill(1),
+    data: [...Array(40).keys()],
   };
 
   toggle = () => {
@@ -47,9 +47,9 @@ class App extends React.Component {
             innerRef={node => (this.scrollbar = node)}
             enable={this.state.enable}
           >
-            {Array(20)
-              .fill(1)
-              .map((value, index) => <div key={index}>{value + index}</div>)}
+            {[...Array(20).keys()].map((value, index) => (
+              <div key={index}>{value + index}</div>
+            ))}
           </Scrollbar>
         </div>
 

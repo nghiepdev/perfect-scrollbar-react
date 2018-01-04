@@ -95,8 +95,8 @@ render() {
         style={{ display: 'flex', maxHeight: '200px' }}
       >
         <Scrollbar>
-          {Array(20)
-            .fill(1)
+          {[...Array(20)
+            .keys()]
             .map((value, index) => <div key={index}>{value + index}</div>)}
         </Scrollbar>
       </div>
@@ -119,8 +119,8 @@ render() {
       <div style={{ display: 'flex', maxHeight: '200px' }}>
         <Scrollbar>
           <div className="list-data">
-            {Array(20)
-              .fill(1)
+            {[...Array(20)
+              .keys()]
               .map((value, index) => <div key={index}>{value + index}</div>)}
           </div>
         </Scrollbar>
@@ -143,8 +143,8 @@ render() {
 
       <div className="list-data">
         <Scrollbar>
-          {Array(20)
-            .fill(1)
+          {[...Array(20)
+            .keys()]
             .map((value, index) => <div key={index}>{value + index}</div>)}
         </Scrollbar>
       </div>
